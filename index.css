@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600&family=Poppins&display=swap');
+
+:root{
+    --red : #ff3147;
+    --black:#000000;
+    --white:#ffffff;
+    --gray:#fafafa;
+    --darkgray:#808080;
+}
+
+.bg-red{
+    background-color: var(--red);
+}
+.bg-gray{
+    background-color: var(--gray);
+}
+.bg-black{
+    background-color: var(--black);
+}
+.bg-darkgray{
+    background-color: var(--darkgray);
+}
+
+.pop {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+h3{
+    color: var(--red);
+    padding-bottom: 12px;
+}
+
+button{
+    border-radius: 2px;
+    padding: 16px 28px;
+    border: 0px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: var(--red);
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+
+.cor-sc-regular {
+    font-family: "Cormorant SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.cor-sc-medium {
+    font-family: "Cormorant SC", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.container{
+    width: 100%;
+    /* background-color: var(--white); */
+}
+.section{
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    padding: 100px 0px;
+}
+.heading{
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.cor-sc-semibold {
+    font-family: "Cormorant SC", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#hero{
+    /* padding: 100px 20% ; */
+    /* background-color: red; */
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--red); */
+}
+#hero div.right{
+    width: 487px;
+    min-width: 487px;
+    height: 737px;
+    /* background-color: blue; */
+    border-radius: 8px;
+    background-image: url("/assets/hero@2x.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero div.left h1{
+    font-size: 60px;
+}
+
+#hero div.left p{
+    margin: 50px 0px;
+}
+
+#what{
+    background-color: #FAFAFA;
+}
+
+#what div.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
+}
+
+#what div.top div.text {
+    max-width: 584px;
+}
+
+#what div.slider{
+    display: flex;
+    gap:30px;
+}
+
+#what div.slider div.slider-card{
+    height: 526px;
+    width: 370px;
+    border-radius: 8px;
+    position: relative;
+    color: var(--white);
+    font-size: 24px;
+}
+
+#what div.slider div.slider-card p{
+    font-size: 16px;
+}
+
+#what div.slider div.slider-card div.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    background-color: var(--red);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    border-radius: 8px;
+}
+
+#what div.slider div.slider-card div.overlay p{
+    text-align: center;
+}
+
+#what div.slider div.slider-card div.overlay button{
+    background-color: var(--white);
+    color: var(--red);
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+#what div.slider div.slider-card:hover .overlay{
+    opacity: 1;
+}
+
+#why {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
+}
+
+#why div.best-cards{
+    display: flex;
+    gap:16px;
+}
+
+#why div.best-cards div.best-card{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+#why div.best-cards div.best-card div.title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#why div.best-cards div.best-card div.title p{
+    font-size: 16px;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+}
+
+#projects div.clickables{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+#projects div.clickables div.imagearea{
+    flex: 1 1 0;
+    background-color: red;
+    border-radius: 8px;
+    background-image: url('./assets/image.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#projects div.clickables div.buttons{ 
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-radius: 2px;
+}
+
+#projects div.clickables div.buttons button.project-button{
+    padding: 30px 34px;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    font-size: 16px;
+    max-width: 370px;
+    text-align: left;
+    background-color: var(--gray);
+    color: var(--black);
+}
+
+#projects div.clickables div.buttons button.project-button b{
+    font-size: 20px;
+}
+
+#stats{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--darkgray); */
+}
+
+#stats div.growth-cards{
+    display: flex;
+    gap: 30px;
+}
+
+#stats div.growth-cards div.growth-card{
+    padding: 32px;
+    border-radius: 4px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    min-width: 270px;
+}
+
+#stats div.growth-cards div.growth-card:hover{
+    box-shadow: 3px 6px 20px #672c2c1f;
+}
+
+#stats div.growth-cards div.growth-card p {
+    font-size: 60px;
+}
+
+#feedback{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#feedback div.quote{
+    position: relative;
+    z-index: 99;
+}
+
+#feedback div.quote img{
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    z-index: -10;
+}
+
+#feedback p{
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+#feedback .by{
+    color: var(--red);
+    font-weight: 900;
+}
+
+#feedback .by .position{
+    color: var(--darkgray);
+    font-weight: 200;
+}
+
+#footer{
+
+}
