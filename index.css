@@ -6,6 +6,11 @@
     --white:#ffffff;
     --gray:#fafafa;
     --darkgray:#808080;
+    --bg-color: #424242;
+  --hl-color: #2196F3;
+  --muted-color: #bdbdbd;
+  --trans-time: 300ms;
+  --width: 320px;
 }
 
 .bg-red{
@@ -232,13 +237,12 @@ button{
 
 #projects div.clickables div.imagearea{
     flex: 1 1 0;
-    background-color: red;
+    /* background-color: red; */
     border-radius: 8px;
-    background-image: url('./assets/image.png');
+    background-image: url('./assets/hero@2x.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
 
 #projects div.clickables div.buttons{ 
@@ -258,6 +262,11 @@ button{
     text-align: left;
     background-color: var(--gray);
     color: var(--black);
+}
+
+#projects div.clickables div.buttons button.project-button.active {
+    background-color: var(--red);
+    color: var(--white);
 }
 
 #projects div.clickables div.buttons button.project-button b{
@@ -336,4 +345,143 @@ button{
 
 #footer{
 
+}
+
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    z-index: 100; /* Ensure modal is on top of other content */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+#modal {
+    background-color: var(--white);
+    /* margin: 100px auto; */
+    padding: 32px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%; /* Responsive design */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#modal form div.two-inputs{
+    display: flex;
+    gap: 16px;
+}
+
+input[type="checkbox"]{
+    /* margin: 8px; */
+    align-self:flex-start;
+    width: 40px;
+    color: var(--red);
+    accent-color: var(--red);
+    height: 40px;
+    /* padding: 4px; */
+    border-radius: 4px;
+}
+
+div.checkbox {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-bottom: 20px;
+    /* justify-content: flex-start; */
+}
+
+
+.group {
+    position: relative;
+    margin: 0px 0;
+  }
+
+textarea {
+    resize: none;
+  }
+  
+input,
+textarea {
+    background: none;
+    font-family: "Poppins", sans-serif;
+    color: var(--black);
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--muted-color);
+}
+  
+input:focus,
+textarea:focus {
+    outline: none;
+}
+  
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: var(--red);
+}
+  
+input:focus ~ .bar:before,
+textarea:focus ~ .bar:before {
+width: 100%;
+}
+
+input[type="password"] {
+letter-spacing: 0.3em;
+}
+
+label {
+color: var(--darkgray);
+font-size: 16px;
+font-weight: normal;
+position: absolute;
+pointer-events: none;
+left: 5px;
+top: 10px;
+transition: var(--trans-time) ease all;
+}
+
+.bar {
+position: relative;
+display: block;
+width: 100%;
+}
+
+.bar:before {
+content: '';
+height: 2px;
+width: 0;
+bottom: 0;
+position: absolute;
+background: var(--red);
+transition: var(--trans-time) ease all;
+left: 0;
 }

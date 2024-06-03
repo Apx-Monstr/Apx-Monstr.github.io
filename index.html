@@ -23,7 +23,7 @@
                 <p>
                     Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum
                 </p>
-                <button>
+                <button id="contact-us">
                     CONTACT US
                 </button>
             </div>
@@ -53,7 +53,7 @@
                         <p>
                             Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque
                         </p>
-                        <button>
+                        <button class="readmore">
                             Read More
                             <img src="./assets/arrow.png" alt="">
                         </button>
@@ -67,7 +67,7 @@
                         <p>
                             Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque
                         </p>
-                        <button>
+                        <button class="readmore">
                             Read More
                             <img src="./assets/arrow.png" alt="">
                         </button>
@@ -81,7 +81,7 @@
                         <p>
                             Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque
                         </p>
-                        <button>
+                        <button class="readmore">
                             Read More
                             <img src="./assets/arrow.png" alt="">
                         </button>
@@ -95,7 +95,7 @@
                         <p>
                             Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque
                         </p>
-                        <button>
+                        <button class="readmore">
                             Read More
                             <img src="./assets/arrow.png" alt="">
                         </button>
@@ -169,11 +169,11 @@
                 WHY WE ARE BEST
             </div>
             <div class="clickables">
-                <div src="./assets/image.png" class="imagearea">
+                <div class="imagearea">
                     
                 </div>
                 <div class="buttons pop">
-                    <button data-image="./assets/image.png" class="project-button">
+                    <button data-image="./assets/hero@2x.png" class="project-button active">
                         <b>
                             Genderless Kei - Japan's Hot
                         </b>
@@ -185,7 +185,7 @@
                         </b>
                         Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of
                     </button>
-                    <button data-image="image1.jpg" class="project-button">
+                    <button data-image="./assets/2.png" class="project-button">
                         <b>
                             Genderless Kei - Japan's Hot
                         </b>
@@ -274,5 +274,44 @@
             <img src="./assets/Group 500.png" alt="" srcset="">
         </div>
     </div>
+    <div id="modal-container">
+        <div id="modal">
+            <div class="heading">
+                Talk To Us
+            </div>
+            <form id="contactus-form">
+                <div class="group">
+                    <input id="email" name="email" type="email" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Work Email*</label>
+                </div>
+                <div class="two-inputs">
+                    <div class="group">
+                        <input id="fname" name="fname" type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>First Name*</label>
+                    </div>
+                    <div class="group">
+                        <input id = "lname" name="lname" type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Last Name*</label>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" required checked/> 
+                    <span>
+                        I agree to Fyle's terms and conditions, and provide consent to send me communication.
+                    </span>
+                </div>
+                <button type="submit">
+                    Contact Us
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
 </body>
 </html>
