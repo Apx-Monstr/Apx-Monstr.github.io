@@ -7,10 +7,7 @@
     --gray:#fafafa;
     --darkgray:#808080;
     --bg-color: #424242;
-  --hl-color: #2196F3;
-  --muted-color: #bdbdbd;
-  --trans-time: 300ms;
-  --width: 320px;
+    --trans-time: 300ms;
 }
 
 .bg-red{
@@ -341,10 +338,6 @@ button{
 #feedback .by .position{
     color: var(--darkgray);
     font-weight: 200;
-}
-
-#footer{
-
 }
 
 #modal-container {
